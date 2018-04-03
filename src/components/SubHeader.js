@@ -28,7 +28,7 @@ class SubHeader extends Component {
                                     <a href="/">Overview</a>
                                 </li>
                                 <li className={chosenTab==="New Test" ? 'is-active' : ''}>
-                                    <a href="/new_test_form">New Test</a>
+                                    <a href="/new_test_page">New Test</a>
                                 </li>
                             </ul>
                       </nav>

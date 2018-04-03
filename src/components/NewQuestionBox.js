@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
 import 'font-awesome/css/font-awesome.min.css';
-import AnswerChoice from './AnswerChoice';
-import update from 'react-addons-update'; // ES6
 import _ from 'lodash';
 
 
@@ -11,7 +9,6 @@ class NewQuestionBox extends Component {
         this.state = {
             question: '',
             answers: [{value: ''}]
-
         }
     }
 

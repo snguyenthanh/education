@@ -5,11 +5,10 @@
   "dependencies": {
     "font-awesome": "^4.7.0",
     "react": "^16.3.0",
-    "react-addons-update": "^15.6.2",
     "react-dom": "^16.3.0",
-    "react-radio-buttons": "^1.2.1",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "1.1.2"
+    "react-scripts": "1.1.2",
+    "react-select": "^1.2.1"
   },
   "scripts": {
     "start": "react-scripts start",
