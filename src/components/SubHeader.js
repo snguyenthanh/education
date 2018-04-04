@@ -14,7 +14,7 @@ class SubHeader extends Component {
                         <div className="columns is-vcentered">
                             <div className="column">
                                 <p className="subtitle">
-                                    Not sure what to put here
+                                    Nothing to show here.
                                 </p>
                             </div>
                         </div>
@@ -29,6 +29,9 @@ class SubHeader extends Component {
                                 </li>
                                 <li className={chosenTab==="New Test" ? 'is-active' : ''}>
                                     <a href="/new_test_page">New Test</a>
+                                </li>
+                                <li className={chosenTab==="Take the test" ? 'is-active' : ''}>
+                                    <a href="/test">Take the test</a>
                                 </li>
                             </ul>
                       </nav>

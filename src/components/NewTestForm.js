@@ -13,7 +13,10 @@ class NewTestForm extends Component {
             testName: '',
             selectedSection: '',
             content: '',
-            questions: []
+            questions: [{
+                question: '',
+                answers: [{value: ''}]
+            }]
         };
     }
 
@@ -70,11 +73,20 @@ class NewTestForm extends Component {
                 <label className="label">Content</label>
                 <div className="columns">
                     <div className="column is-6">
-                        <textarea class="textarea" placeholder="Contents to read" rows="15" onChange={this.onContentChange}></textarea>
+                        <textarea className="textarea" placeholder="Contents to read" rows="15" onChange={this.onContentChange}></textarea>
                     </div>
 
                     <div className="column is-5">
-                        hello
+                        {
+                            this.state.questions.map((entry, entryIndex) => (
+                                <div className="card">
+                                    <div className="card-content">
+
+
+                                    </div>
+                                </div>
+                            ))
+                        }
                     </div>
                 </div>
 
