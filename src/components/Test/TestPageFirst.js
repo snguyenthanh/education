@@ -22,7 +22,7 @@ class TestPageFirst extends Component {
             <div>
                 <br/>
                 <div className="columns">
-                    <div className="column is-2"/>
+                    <div className="column is-3"/>
                     <div className="column is-4">
                         <a className="button is-primary" style={buttonBigStyle} href="/test/sat">
                             <span style={textButtonBigStyle}>SAT</span>

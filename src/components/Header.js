@@ -11,13 +11,13 @@ class Header extends Component {
   <img src="http://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28"/>
 </a>
 
-<a className="navbar-item is-hidden-desktop" href="https://github.com/jgthms/bulma" target="_blank">
+<a className="navbar-item is-hidden-desktop" href="https://github.com/jgthms/bulma" >
   <span className="icon">
     <i className="fa fa-github"></i>
   </span>
 </a>
 
-<a className="navbar-item is-hidden-desktop" href="https://twitter.com/jgthms" target="_blank">
+<a className="navbar-item is-hidden-desktop" href="https://twitter.com/jgthms" >
   <span className="icon" >
     <i className="fa fa-twitter"></i>
   </span>
@@ -193,20 +193,20 @@ class Header extends Component {
     </div>
   </div>
   <a className="navbar-item " href="http://bulma.io/expo/">
-    <span className="bd-emoji">🎨</span> &nbsp;Expo
+    &nbsp;Expo
   </a>
   <a className="navbar-item " href="http://bulma.io/love/">
-    <span className="bd-emoji">❤️</span> &nbsp;Love
+    &nbsp;Love
   </a>
 </div>
 
 <div className="navbar-end">
-  <a className="navbar-item is-hidden-desktop-only" href="https://github.com/jgthms/bulma" target="_blank">
+  <a className="navbar-item is-hidden-desktop-only" href="https://github.com/jgthms/bulma" >
     <span className="icon">
       <i className="fa fa-github"></i>
     </span>
   </a>
-  <a className="navbar-item is-hidden-desktop-only" href="https://twitter.com/jgthms" target="_blank">
+  <a className="navbar-item is-hidden-desktop-only" href="https://twitter.com/jgthms" >
     <span className="icon">
       <i className="fa fa-twitter"></i>
     </span>
@@ -214,7 +214,7 @@ class Header extends Component {
   <div className="navbar-item">
     <div className="field is-grouped">
       <p className="control">
-        <a className="bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="http://bulma.io" target="_blank" href="https://twitter.com/intent/tweet?text=Bulma: a modern CSS framework based on Flexbox&hashtags=bulmaio&url=http://bulma.io&via=jgthms">
+        <a className="bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="http://bulma.io"  href="https://twitter.com/intent/tweet?text=Bulma: a modern CSS framework based on Flexbox&hashtags=bulmaio&url=http://bulma.io&via=jgthms">
           <span className="icon">
 <i className="fa fa-twitter"></i>
 </span>

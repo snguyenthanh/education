@@ -1,12 +1,10 @@
 import React, {Component} from 'react';
-import QuestionBox from './QuestionBox';
-import NewQuestionBox from './NewQuestionBox';
-import NewTestForm from './NewTestForm';
 import {List, ListItem} from 'material-ui/List';
 import ActionDescription from 'material-ui/svg-icons/action/description';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import LoadingSpinner from './LoadingSpinner';
+import LoadingSpinner from '../assets/LoadingSpinner';
 import TestMenu from './TestMenu';
+import TestStartPage from './TestStartPage';
 
 class TestForm extends Component {
     constructor(props) {
@@ -71,7 +69,6 @@ class TestForm extends Component {
             this.state.actTestNames
         );
 
-        console.log(this.state.isLoading);
         const loadingSpinner = (this.state.isLoading) ? (
             <LoadingSpinner />
         ) : (
@@ -111,16 +108,7 @@ class TestForm extends Component {
             </div>
         ) : (
             <div>
-                
-                /*
-                <div> Welcome to the test {testNum}</div>
-                <div className="columns">
-                    <div className="column is-2">
-                        <TestMenu />
-                    </div>
-                </div>
-                */
-
+                <TestStartPage testNum={testNum} testType={testType} />
             </div>
         );
 

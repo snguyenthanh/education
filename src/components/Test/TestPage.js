@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
-import SubHeader from './SubHeader';
-import QuestionBox from './QuestionBox';
-import NewQuestionBox from './NewQuestionBox';
-import NewTestForm from './NewTestForm';
+import SubHeader from '../SubHeader';
+import QuestionBox from '../QuestionBox';
+import NewQuestionBox from '../New/NewQuestionBox';
+import NewTestForm from '../New/NewTestForm';
 import TestPageFirst from './TestPageFirst';
 import TestForm from './TestForm';
+import TestQuestions from './TestQuestions';
 
 class TestPage extends Component {
     constructor(props) {
@@ -36,13 +37,31 @@ class TestPage extends Component {
         }
 
         const testType = this.props.testType;
-        const testToDisplay = (testType===undefined) ? (
+
+        var testToDisplay = (
             <TestPageFirst />
-        ) : (
-            <div>
-                <TestForm testType={testType} testNum={this.props.match.params.testNum} db={this.props.db}/>
-            </div>
-        );
+        )
+
+        if (this.props.proceedToQuestions === true) {
+            testToDisplay = (
+                <TestQuestions
+                    testType={testType}
+                    testNum={this.props.match.params.testNum}
+                    testSection={"Reading Test"}
+                    testPart={1}
+                    db={this.props.db}
+                />
+            )
+        }
+        else if (testType!==undefined) {
+            testToDisplay = (
+                <TestForm
+                    testType={testType}
+                    testNum={this.props.match.params.testNum}
+                    db={this.props.db}
+                />
+            )
+        }
 
         return (
             <div>

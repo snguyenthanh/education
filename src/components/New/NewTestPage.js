@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import SubHeader from './SubHeader';
-import QuestionBox from './QuestionBox';
+import SubHeader from '../SubHeader';
+import QuestionBox from '../QuestionBox';
 import NewQuestionBox from './NewQuestionBox';
 import NewTestForm from './NewTestForm';
 

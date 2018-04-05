@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import QuestionBox from './QuestionBox';
+import QuestionBox from '../QuestionBox';
 import NewQuestionBox from './NewQuestionBox';
 import Select from 'react-select';
 import 'react-select/dist/react-select.css';

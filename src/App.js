@@ -3,8 +3,8 @@ import logo from './logo.svg';
 import './css/App.css';
 import Header from './components/Header';
 import SubHeader from './components/SubHeader';
-import NewTestPage from './components/NewTestPage';
-import TestPage from './components/TestPage';
+import NewTestPage from './components/New/NewTestPage';
+import TestPage from './components/Test/TestPage';
 import Overview from './components/Overview';
 import PageNotFound from './components/PageNotFound';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -48,9 +48,12 @@ class App extends Component {
                     <Route path="/new_test_page" render={props => <NewTestPage chosenTab={this.changeTab} {...props} />} />
                     <Route exact path="/test" render={props => <TestPage chosenTab={this.changeTab} {...props} />} />
                     <Route exact path="/test/sat/" render={props => <TestPage chosenTab={this.changeTab} testType="SAT" db={firebase.firestore()} {...props} />} />
-                    <Route path="/test/sat/:testNum" render={props => <TestPage chosenTab={this.changeTab} testType="SAT" db={firebase.firestore()} {...props} />} />
+                    <Route exact path="/test/sat/:testNum" render={props => <TestPage chosenTab={this.changeTab} testType="SAT" db={firebase.firestore()} {...props} />} />
                     <Route exact path="/test/act/" render={props => <TestPage chosenTab={this.changeTab} testType="ACT" db={firebase.firestore()} {...props} />} />
-                    <Route path="/test/act/:testNum" render={props => <TestPage chosenTab={this.changeTab} testType="ACT" db={firebase.firestore()} {...props} />} />
+                    <Route exact path="/test/act/:testNum" render={props => <TestPage chosenTab={this.changeTab} testType="ACT" db={firebase.firestore()} {...props} />} />
+
+                    <Route exact path="/test/sat/:testNum/questions" render={props => <TestPage chosenTab={this.changeTab} testType="SAT" db={firebase.firestore()} proceedToQuestions={true} {...props} />} />
+                    <Route exact path="/test/act/:testNum/questions" render={props => <TestPage chosenTab={this.changeTab} testType="ACT" db={firebase.firestore()} proceedToQuestions={true} {...props} />} />
 
                     <Route component={PageNotFound} />
                 </Switch>
