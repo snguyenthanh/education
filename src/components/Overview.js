@@ -6,10 +6,20 @@ class Overview extends Component {
         super(props);
     }
 
+    changeChosenTab = (value) => {
+        if (typeof this.props.chosenTab === 'function') {
+            this.props.chosenTab(value);
+        }
+    }
+
+    componentWillMount() {
+        this.changeChosenTab("Overview");
+    }
+
     render(){
         return (
             <div>
-                <SubHeader chosenTab={this.props.chosenTab} />
+                {/* <SubHeader chosenTab={this.changeChosenTab("Overview")} /> */}
                 <div>Overview</div>
             </div>
         );

@@ -13,6 +13,17 @@ class TestPage extends Component {
             testType: ''
         };
     }
+
+    changeChosenTab = (value) => {
+        if (typeof this.props.chosenTab === 'function') {
+            this.props.chosenTab(value);
+        }
+    }
+
+    componentWillMount() {
+        this.changeChosenTab("Take the test");
+    }
+
     render(){
         const buttonBigStyle = {
             display: "inline-block",
@@ -29,18 +40,18 @@ class TestPage extends Component {
             <TestPageFirst />
         ) : (
             <div>
-                <TestForm testType={testType} testNum={this.props.match.params.testNum} />
+                <TestForm testType={testType} testNum={this.props.match.params.testNum} db={this.props.db}/>
             </div>
         );
 
         return (
             <div>
-                <SubHeader chosenTab={this.props.chosenTab} />
                 <br/>
                 {testToDisplay}
 
                 {/* <NewQuestionBox /> */}
                 {/*
+                <SubHeader chosenTab={this.props.chosenTab} />
                 <NewTestForm />
                 <QuestionBox question="Can a car run down the hill at velocity 2ms and stop before hitting the tree ?" multiAnswers={['Yes', 'No', 'May Be']} />
                 */}

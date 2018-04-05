@@ -11,14 +11,25 @@ class NewTestPage extends Component {
             testName: ''
         };
     }
+
+    changeChosenTab = (value) => {
+        if (typeof this.props.chosenTab === 'function') {
+            this.props.chosenTab(value);
+        }
+    }
+
+    componentWillMount() {
+        this.changeChosenTab("New Test");
+    }
+
     render(){
         return (
             <div>
-                <SubHeader chosenTab={this.props.chosenTab} />
 
                 <NewTestForm />
                 {/* <NewQuestionBox /> */}
                 {/*
+                <SubHeader chosenTab={this.props.chosenTab} />
                 <QuestionBox question="Can a car run down the hill at velocity 2ms and stop before hitting the tree ?" multiAnswers={['Yes', 'No', 'May Be']} />
                 */}
 
