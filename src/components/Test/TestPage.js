@@ -6,6 +6,7 @@ import NewTestForm from '../New/NewTestForm';
 import TestPageFirst from './TestPageFirst';
 import TestForm from './TestForm';
 import TestQuestions from './TestQuestions';
+import {sectionsSAT} from '../constants.js';
 
 class TestPage extends Component {
     constructor(props) {
@@ -47,8 +48,8 @@ class TestPage extends Component {
                 <TestQuestions
                     testType={testType}
                     testNum={this.props.match.params.testNum}
-                    testSection={"Reading Test"}
-                    testPart={1}
+                    chosenSection={sectionsSAT[0]}
+                    chosenPart={"Part 1"}
                     db={this.props.db}
                 />
             )

@@ -36,13 +36,13 @@ class QuestionBox extends Component {
                 <form>
                     <div className='column is-4'>
                     {
-                        this.props.multiAnswers.map((answer) => (
+                        this.props.multiAnswers.map((answer, index) => (
                             <label key={answer} className="radio" style={radioGroupStyle} >
                                 <input type="radio"
                                     name="answerQuestionBox"
                                     style={radioInputStyle}
                                     onChange={this.onChange}
-                                    value={answer} />
+                                    value={index} />
                                     {answer}
                                     </label>
                         ))

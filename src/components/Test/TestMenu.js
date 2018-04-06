@@ -1,46 +1,59 @@
 import React, {Component} from 'react';
+import {sectionsSAT} from '../constants.js';
 
 class TestMenu extends Component {
     constructor(props) {
         super(props);
+        this.handlePartChange = this.handlePartChange.bind(this);
+    }
+
+    handlePartChange = (part) => {
+        if (typeof this.props.onPartChange === 'function') {
+            this.props.onPartChange(part);
+        }
     }
 
     render(){
+        // This variables must be Arrays
+        const partsOfChosenSection = this.props.partsOfChosenSection.sort((a, b) => a > b);
+
+        // This variable must be String and exist in `partsOfChosenSection`
+        const chosenPart = this.props.chosenPart;
+
+        // This variable must exist in `sectionsSAT`
+        const chosenSection = this.props.chosenSection;
+
         return (
             <aside className="menu">
-              <p className="menu-label">
-                General
-              </p>
-              <ul className="menu-list">
-                <li><a>Dashboard</a></li>
-                <li><a>Customers</a></li>
-              </ul>
-              <p className="menu-label">
-                Administration
-              </p>
-              <ul className="menu-list">
-                <li><a>Team Settings</a></li>
-                <li>
-                  <a className="is-active">Manage Your Team</a>
-                  <ul>
-                    <li><a>Members</a></li>
-                    <li><a>Plugins</a></li>
-                    <li><a>Add a member</a></li>
-                  </ul>
-                </li>
-                <li><a>Invitations</a></li>
-                <li><a>Cloud Storage</a></li>
-                <li><a>Authentication</a></li>
-              </ul>
-              <p className="menu-label">
-                Transactions
-              </p>
-              <ul className="menu-list">
-                <li><a>Payments</a></li>
-                <li><a>Transfers</a></li>
-                <li><a>Balance</a></li>
-              </ul>
+                {
+                    sectionsSAT.map((section, sectionIndex) => (
+                        <div>
+                            <p className="menu-label">{sectionIndex+1 + ". " + section}</p>
+                            <ul className="menu-list">
+                                {
+                                    partsOfChosenSection.map(part => {
+                                        return (part===chosenPart && chosenSection===section) ? (
+                                            <li><a
+                                                    className="is-active"
+                                                    value={part}
+                                                    onClick={(e) => this.handlePartChange(part)}>
+                                                {part}
+                                                </a>
+                                            </li>
+                                        ) : (
+                                            chosenSection===section ? (
+                                                <li><a onClick={(e) => this.handlePartChange(part)}>{part}</a></li>
+                                            ): (<div/>)
+                                        )
+                                    })
+                                }
+                            </ul>
+                        </div>
+                    ))
+                }
             </aside>
+
+
         );
     }
 }

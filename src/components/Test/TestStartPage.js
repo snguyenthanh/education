@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {sectionsSAT} from '../constants.js';
 
 const titleStyle = {
     color: "green",
@@ -38,10 +39,11 @@ class TestStartPage extends Component {
 
                         <h3>This test has 4 sections:</h3>
                         <ol>
-                            <li>Reading Test</li>
-                            <li>Writing and Language Test</li>
-                            <li>Math Test – No Calculator</li>
-                            <li>Math Test – Calculator</li>
+                            {
+                                sectionsSAT.map((value) => (
+                                    <li>{value}</li>
+                                ))
+                            }
                         </ol>
 
                         <div align="center">

@@ -114,7 +114,6 @@ class TestForm extends Component {
 
         return (
             <div>
-
                 {/* The display component */}
                 {testForm}
             </div>

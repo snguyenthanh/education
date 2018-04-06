@@ -19,8 +19,7 @@ class Overview extends Component {
     render(){
         return (
             <div>
-                {/* <SubHeader chosenTab={this.changeChosenTab("Overview")} /> */}
-                <div>Overview</div>
+                <div>This is the overview</div>
             </div>
         );
     }

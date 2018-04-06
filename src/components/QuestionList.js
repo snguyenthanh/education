@@ -15,7 +15,9 @@ class QuestionList extends Component {
     }
 
     render(){
-        
+        return (
+
+        );
     }
 }
 export default QuestionList

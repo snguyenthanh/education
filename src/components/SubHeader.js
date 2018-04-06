@@ -8,7 +8,7 @@ class SubHeader extends Component {
     render(){
         const chosenTab = this.props.chosenTab;
         return (
-            <section className="hero is-link">
+            <section className="hero is-link is-small">
                 <div className="hero-body">
                     <div className="container">
                         <div className="columns is-vcentered">
@@ -27,8 +27,8 @@ class SubHeader extends Component {
                                 <li className={chosenTab==="Overview" ? 'is-active' : ''} >
                                     <a href="/">Overview</a>
                                 </li>
-                                <li className={chosenTab==="New Test" ? 'is-active' : ''}>
-                                    <a href="/new_test_page">New Test</a>
+                                <li className={chosenTab==="Create New Test" ? 'is-active' : ''}>
+                                    <a href="/new_test_page">Create New Test</a>
                                 </li>
                                 <li className={chosenTab==="Take the test" ? 'is-active' : ''}>
                                     <a href="/test">Take the test</a>

@@ -19,7 +19,7 @@ class NewTestPage extends Component {
     }
 
     componentWillMount() {
-        this.changeChosenTab("New Test");
+        this.changeChosenTab("Create New Test");
     }
 
     render(){
