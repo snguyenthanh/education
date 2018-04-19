@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {sectionsSAT} from '../constants.js';
+import {Link} from 'react-router-dom';
 
 const titleStyle = {
     color: "green",
@@ -47,10 +48,11 @@ class TestStartPage extends Component {
                         </ol>
 
                         <div align="center">
-                            <a className="button is-info is-medium"
-                                href={"/test/" + testType.toLowerCase() + "/"+ testNum + "/" + "questions"}>
+                            <Link to={"/test/" + testType.toLowerCase() + "/"+ testNum + "/" + "questions"}>
+                                <div className="button is-info is-medium">
                                     Start the test
-                            </a>
+                                </div>
+                            </Link>
                         </div>
                     </div>
                 </div>

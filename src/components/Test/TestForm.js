@@ -5,6 +5,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import LoadingSpinner from '../assets/LoadingSpinner';
 import TestMenu from './TestMenu';
 import TestStartPage from './TestStartPage';
+import {Link} from 'react-router-dom';
 
 class TestForm extends Component {
     constructor(props) {
@@ -94,11 +95,12 @@ class TestForm extends Component {
                             {
                                 tests.map((testName, index) => (
                                     <article className="card">
-                                      <ListItem
-                                        href= {"/test/" + testType.toLowerCase() + "/" + (index+1)}
-                                        primaryText={testName}
-                                        leftIcon={<ActionDescription />}
-                                      />
+                                      <Link to={"/test/" + testType.toLowerCase() + "/" + (index+1)}>
+                                          <ListItem
+                                            primaryText={testName}
+                                            leftIcon={<ActionDescription />}
+                                          />
+                                      </Link>
                                     </article>
                                 ))
                             }

@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 
 class TestPageFirst extends Component {
     constructor(props) {
@@ -24,14 +25,18 @@ class TestPageFirst extends Component {
                 <div className="columns">
                     <div className="column is-3"/>
                     <div className="column is-4">
-                        <a className="button is-primary" style={buttonBigStyle} href="/test/sat">
-                            <span style={textButtonBigStyle}>SAT</span>
-                        </a>
+                        <Link to="/test/sat">
+                            <div className="button is-primary" style={buttonBigStyle}>
+                                <span style={textButtonBigStyle}>SAT</span>
+                            </div>
+                        </Link>
                     </div>
                     <div className="column is-4">
-                        <a className="button is-info" style={buttonBigStyle} href="/test/act">
-                            <span style={textButtonBigStyle}>ACT</span>
-                        </a>
+                        <Link to="/test/act">
+                            <div className="button is-info" style={buttonBigStyle}>
+                                <span style={textButtonBigStyle}>ACT</span>
+                            </div>
+                        </Link>
                     </div>
                 </div>
             </div>

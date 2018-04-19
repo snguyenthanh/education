@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 
 class SubHeader extends Component {
     constructor(props) {
@@ -25,13 +26,13 @@ class SubHeader extends Component {
                         <nav className="tabs is-boxed">
                             <ul>
                                 <li className={chosenTab==="Overview" ? 'is-active' : ''} >
-                                    <a href="/">Overview</a>
+                                    <Link to="/">Overview</Link>
                                 </li>
                                 <li className={chosenTab==="Create New Test" ? 'is-active' : ''}>
-                                    <a href="/new_test_page">Create New Test</a>
+                                    <Link to="/new_test_page">Create New Test</Link>
                                 </li>
                                 <li className={chosenTab==="Take the test" ? 'is-active' : ''}>
-                                    <a href="/test">Take the test</a>
+                                    <Link to="/test">Take the test</Link>
                                 </li>
                             </ul>
                       </nav>
