@@ -1,0 +1,76 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js
+
+PATH: 
+  /Users/snguyenthanh/Programs/maven/bin:/Users/snguyenthanh/Programs/spark/bin:/Users/snguyenthanh/.rvm/gems/ruby-2.4.2/bin:/Users/snguyenthanh/.rvm/gems/ruby-2.4.2@global/bin:/Users/snguyenthanh/.rvm/rubies/ruby-2.4.2/bin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/Users/snguyenthanh/anaconda3/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/snguyenthanh/database/mongodb/bin:/Users/snguyenthanh/.rvm/bin
+
+Yarn version: 
+  1.5.1
+
+Node version: 
+  9.10.1
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  {
+    "name": "education",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+      "firebase": "^4.12.1",
+      "firebase-admin": "^5.11.0",
+      "font-awesome": "^4.7.0",
+      "material-ui": "^0.20.0",
+      "react": "^16.3.0",
+      "react-dom": "^16.3.0",
+      "react-fontawesome": "^1.6.1",
+      "react-loadable": "^5.3.1",
+      "react-router-dom": "^4.2.2",
+      "react-scripts": "1.1.2",
+      "react-select": "^1.2.1"
+    },
+    "scripts": {
+      "start": "react-scripts start",
+      "build": "react-scripts build",
+      "test": "react-scripts test --env=jsdom",
+      "eject": "react-scripts eject"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: /Users/snguyenthanh/python/react/education/node_modules/grpc: Command failed.
+  Exit code: 6
+  Command: sh
+  Arguments: -c ./node_modules/.bin/node-pre-gyp install --fallback-to-build --library=static_library
+  Directory: /Users/snguyenthanh/python/react/education/node_modules/grpc
+  Output:
+  node-pre-gyp info it worked if it ends with ok
+  node-pre-gyp info using node-pre-gyp@0.10.0
+  node-pre-gyp info using node@9.10.1 | darwin | x64
+  node-pre-gyp info check checked for "/Users/snguyenthanh/python/react/education/node_modules/grpc/src/node/extension_binary/node-v59-darwin-x64-unknown/grpc_node.node" (not found)
+  node-pre-gyp http GET https://storage.googleapis.com/grpc-precompiled-binaries/node/grpc/v1.11.3/node-v59-darwin-x64-unknown.tar.gz
+  node-pre-gyp ERR! Completion callback never invoked! 
+  node-pre-gyp ERR! System Darwin 16.7.0
+  node-pre-gyp ERR! command "/usr/local/bin/node" "/Users/snguyenthanh/python/react/education/node_modules/grpc/node_modules/.bin/node-pre-gyp" "install" "--fallback-to-build" "--library=static_library"
+  node-pre-gyp ERR! cwd /Users/snguyenthanh/python/react/education/node_modules/grpc
+  node-pre-gyp ERR! node -v v9.10.1
+  node-pre-gyp ERR! node-pre-gyp -v v0.10.0
+  node-pre-gyp ERR! This is a bug in `node-pre-gyp`.
+  node-pre-gyp ERR! Try to update node-pre-gyp and file an issue if it does not help:
+  node-pre-gyp ERR!     <https://github.com/mapbox/node-pre-gyp/issues>
+      at ProcessTermError.MessageError (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:186:110)
+      at new ProcessTermError (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:226:113)
+      at ChildProcess.<anonymous> (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:30281:17)
+      at ChildProcess.emit (events.js:180:13)
+      at maybeClose (internal/child_process.js:936:16)
+      at Socket.stream.socket.on (internal/child_process.js:353:11)
+      at Socket.emit (events.js:180:13)
+      at Pipe._handle.close [as _onclose] (net.js:541:12)

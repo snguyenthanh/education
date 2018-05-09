@@ -78,4 +78,5 @@ class App extends Component {
     }
 }
 
+// env PATH="/usr/bin:$PATH" npm install
 export default App;
